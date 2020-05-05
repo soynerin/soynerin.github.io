@@ -36,6 +36,49 @@
     <link rel="stylesheet" href="assets/css/color/orange-color.css" id="option-color">
     <!--  Custom Style CSS  -->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script>         
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBELnu3mEyMzyfQrFlkXkit8PjxmCEZ0O4",
+            authDomain: "ng-firebase-tests.firebaseapp.com",
+            databaseURL: "https://ng-firebase-tests.firebaseio.com",
+            projectId: "ng-firebase-tests",
+            storageBucket: "ng-firebase-tests.appspot.com",
+            messagingSenderId: "122467994393",
+            appId: "1:122467994393:web:fb490f653811ecc6f79388"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        function get_viewers_ip(json) {
+            viewers_ip = json.ip;
+            count_view(viewers_ip);
+        }
+
+        function count_view(viewers_ip) {
+            var views;
+            var ip_to_string = viewers_ip.toString();
+
+            for (let index = 0; index < ip_to_string.length; index++) {
+                ip_to_string = ip_to_string.replace(".", "-")        
+            }
+
+            firebase.database().ref().child("page_views/" + ip_to_string).set({
+                viewers_ip: viewers_ip
+            });
+
+            firebase.database().ref().child("page_views").on("value", function(snapshot){
+                const visitas = document.getElementById('contadorVisitas');
+                views = snapshot.numChildren();                
+            });
+        }        
+    </script>    
 </head>
 
 <body data-spy="scroll" data-target="#scrollspy" data-offset="1">
@@ -339,7 +382,7 @@
                                         <i class="lni-website base-color"></i>
                                     </div>
                                     <div class="my-3">
-                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000">0</span>
+                                        <span id="contadorVisitas" class="timer count-number" data-from="0" data-to="0" data-speed="5000"></span>
                                     </div>
                                     <p class="mb-0">Visitas</p>
                                 </div>
@@ -349,7 +392,7 @@
                                         <i class="lni-pencil-alt base-color"></i>
                                     </div>
                                     <div class="my-3">
-                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000">0</span>
+                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000"></span>
                                     </div>
                                     <p class="mb-0">Proyectos terminados</p>
                                 </div>
@@ -359,7 +402,7 @@
                                         <i class="lni-medall  base-color"></i>
                                     </div>
                                     <div class="my-3">
-                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000">0</span>
+                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000"></span>
                                     </div>
                                     <p class="mb-0">Premios recibidos</p>
                                 </div>
@@ -369,7 +412,7 @@
                                         <i class="lni-emoji-smile base-color"></i>
                                     </div>
                                     <div class="my-3">
-                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000">0</span>
+                                        <span class="timer count-number" data-from="0" data-to="0" data-speed="5000"></span>
                                     </div>
                                     <p class="mb-0">Clientes satisfechos</p>
                                 </div>
@@ -1134,8 +1177,12 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- My Personal JS -->
-    <script src="assets/js/soynerin-dist.js"></script>
+    <script src="assets/js/soynerin-dist.js"></script>    
+
+    <script src="https://api.ipify.org?format=jsonp&callback=get_viewers_ip"></script>
 </body>
 
 </html>

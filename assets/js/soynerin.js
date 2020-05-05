@@ -1,4 +1,3 @@
-
 document.getElementById('submit-btn').addEventListener('click', function(){
     const emailTo = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
@@ -46,9 +45,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
                         title: 'El mensaje ha sido enviado'
                     })  
                 }
-
             }
-
         }
     );
 })
