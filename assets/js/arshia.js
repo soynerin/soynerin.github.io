@@ -23,6 +23,7 @@ $(document).ready(function() {
     menuToggler();
     sliderOwlCarousel();
     clientCarousel();
+    educationCarousel();
     typedJS();
     skills();
     countup();
@@ -143,7 +144,7 @@ function colorScheme() {
     "use strict";
     const currentHour = new Date().getHours();
 
-    if (currentHour >= 19) {
+    if (currentHour >= 19 || currentHour <= 8) {
         $("body").toggleClass('arshia-dark');
         // $('.section').toggleClass('dark-bg');
         $('.color-scheme').removeClass('d-none').addClass('d-inline-block');
@@ -403,6 +404,37 @@ function clientCarousel() {
             },
             1200: {
                 items: 2,
+                nav: false,
+            },
+
+        }
+    });
+}
+
+/*-------------------------
+  EDICATION CAROUSEL JS
+-------------------------*/
+function educationCarousel() {
+    $(".education .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        stagePadding: 5,
+        nav: false,
+        autoplay: true,
+        dots: true,
+        mouseDrag: true,
+        touchDrag: true,
+        smartSpeed: 700,
+        autoplayHoverPause: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                mouseDrag: false
+            },
+            1200: {
+                items: 1,
                 nav: false,
             },
 

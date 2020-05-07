@@ -79,6 +79,10 @@
   background-color: #ff645e;
 }
 
+.education .owl-dot.active span {
+  background-color: #ff645e;
+}
+
 .blog-link a:hover {
   color: #f05852 !important;
 }
@@ -92,6 +96,10 @@
 }
 
 .testimonial .owl-carousel .owl-dot.active span {
+  background-color: #ff645e;
+}
+
+.education .owl-carousel .owl-dot.active span {
   background-color: #ff645e;
 }
 

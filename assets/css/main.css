@@ -1328,6 +1328,103 @@ canvas.particles-js-canvas-el {
 
 
 /*-------------------------
+       ONLINE EDUCATION
+-------------------------*/
+
+.education .owl-carousel .online-education-item {
+    padding: 0 30px 30px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.education .owl-carousel .online-education-item img {
+    width: 85px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.education .owl-carousel .online-education-item:hover .online-education-border {
+    width: 90px;
+}
+
+.education .owl-carousel .owl-stage-outer {
+    padding: 1rem 0;
+}
+
+.education .owl-carousel .online-education-image {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: -60px;
+    background-color: #f1f3f6;
+    width: 115px;
+    height: 115px;
+}
+
+.education .owl-carousel .online-education-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 92%;
+    height: 40%;
+    background-color: #f1f3f6;
+    z-index: 1;
+    right: 6px;
+}
+
+.education .owl-carousel .online-education-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 3px 3px 3px #dadada, inset -3px -3px 3px #fafafa;
+    border-radius: 50%;
+    z-index: 0;
+    left: 2px;
+}
+
+.education .owl-carousel .online-education-image .img-thumbnail {
+    background-color: transparent;
+}
+
+.education .owl-carousel .online-education-image-border {
+    box-shadow: 3px 3px 3px #dadada, -3px -3px 3px #fafafa;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.education .owl-carousel .owl-item {
+    padding-top: 2rem;
+}
+
+.education .owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.education .owl-carousel .owl-dot span {
+    display: block;
+    width: 24px;
+    height: 5px;
+    background-color: #e1e1e1;
+    margin: 0 4px;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.education .owl-carousel .owl-dot.active span {
+    width: 2rem;
+    box-shadow: 3px 3px 8px rgba(55, 84, 170, 0.1), -3px -3px 8px white;
+}
+
+
+/*-------------------------
           BLOG
 -------------------------*/
 
@@ -1564,10 +1661,33 @@ canvas.particles-js-canvas-el {
     .display-content {
         display: block;
     }
+
+    .education .owl-item.active {
+        margin-right: 7.5rem !important;
+    }
+    .education .owl-carousel .owl-stage-outer {
+        height: auto;
+        max-height: 320px;
+    }
+    .education .owl-stage {
+        height: auto;
+        max-height: 320px;
+    }
+    .education .owl-dots {
+        margin-top: 0 !important;
+    }
+    .education .display-table,
+    .display-content {
+        display: block;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1080px) {
     .testimonial .owl-dots {
+        margin-right: 6rem;
+    }
+
+    .education .owl-dots {
         margin-right: 6rem;
     }
 }
@@ -1690,6 +1810,34 @@ canvas.particles-js-canvas-el {
     .testimonial .owl-carousel .owl-item {
         padding-top: 1rem;
     }
+
+    .education .display-table,
+    .education .display-content {
+        display: block;
+    }
+    .education .online-education-item {
+        padding: 16px;
+    }
+    .education .owl-carousel .owl-stage-outer {
+        height: auto;
+        max-height: 335px;
+    }
+    .education .owl-stage {
+        height: auto;
+        max-height: 335px;
+    }
+    .education p {
+        margin: 0 !important;
+    }
+    .education span {
+        margin-top: 5px !important;
+    }
+    .education .owl-carousel .owl-dots {
+        margin-top: 1rem !important;
+    }
+    .education .owl-carousel .owl-item {
+        padding-top: 1rem;
+    }
     #message.toast {
         top: 18px;
         left: inherit;
@@ -1802,6 +1950,16 @@ canvas.particles-js-canvas-el {
     background-color: #2c2d30;
 }
 
+.arshia-dark .education .owl-carousel .online-education-image::before,
+.arshia-dark .skill-box .skillbar,
+.arshia-dark .blog-item:before,
+.arshia-dark .blog-image,
+.arshia-dark .education .owl-carousel .online-education-image,
+.arshia-dark .blog-single .modal-content,
+.arshia-dark .portfolio-single .modal-content {
+    background-color: #2c2d30;
+}
+
 .arshia-dark .box-border,
 .arshia-dark .box-hover-border,
 .arshia-dark .button-border,
@@ -1832,6 +1990,21 @@ canvas.particles-js-canvas-el {
 }
 
 .arshia-dark .testimonial .owl-dot.active span {
+    box-shadow: -1px -1px 4px rgba(83, 83, 83, 0.4), 1px 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.arshia-dark .education .owl-carousel .online-education-image::after,
+.arshia-dark .skill-box .skillbar,
+.arshia-dark .blog-image:after {
+    box-shadow: inset 3px 3px 3px #202125, inset -3px -3px 3px #3e3e3e;
+}
+
+.arshia-dark .online-education-image-border,
+.arshia-dark .education .owl-carousel .online-education-image-border {
+    box-shadow: 3px 3px 3px #202125, -3px -3px 3px #3e3e3e;
+}
+
+.arshia-dark .education .owl-dot.active span {
     box-shadow: -1px -1px 4px rgba(83, 83, 83, 0.4), 1px 1px 4px rgba(0, 0, 0, 0.35);
 }
 
@@ -1883,6 +2056,18 @@ canvas.particles-js-canvas-el {
     height: auto;
 }
 
+.flat-demo .online-education-image-border {
+    background-color: #f8f8f8;
+}
+
+.flat-demo .online-education-image-border img {
+    padding: 4px;
+    background-color: transparent;
+    border: 1px solid #e3e5d2;
+    max-width: 100%;
+    height: auto;
+}
+
 .flat-demo .skill-box .skillbar {
     background-color: #e1e1e1;
 }
@@ -1908,6 +2093,16 @@ canvas.particles-js-canvas-el {
 .flat-demo .blog-intro,
 .flat-demo .contact .form-item .form-group,
 .flat-demo .testimonial .owl-carousel .testimonial-image-border {
+    box-shadow: none;
+}
+
+.flat-demo .pill-button:hover,
+.flat-demo .pill-button.active,
+.flat-demo .education .owl-dot.active span,
+.flat-demo .skill-box .skillbar,
+.flat-demo .blog-intro,
+.flat-demo .contact .form-item .form-group,
+.flat-demo .education .owl-carousel .online-education-image-border {
     box-shadow: none;
 }
 
@@ -1942,6 +2137,18 @@ canvas.particles-js-canvas-el {
     background-color: transparent;
 }
 
+.flat-demo .education .owl-carousel .online-education-image::after,
+.flat-demo .education .owl-carousel .online-education-image::before,
+.flat-demo .blog-item::before,
+.flat-demo .blog-image::after {
+    display: none;
+}
+
+.flat-demo .education .owl-carousel .online-education-image,
+.flat-demo .portfolio-filter .button-border {
+    background-color: transparent;
+}
+
 .flat-demo .portfolio-filter .pill-button {
     color: #3c3c3c;
 }
@@ -1972,6 +2179,17 @@ canvas.particles-js-canvas-el {
 }
 
 .arshia-dark.flat-demo .testimonial-image-border img {
+    border: 1px solid #3c3c3c;
+}
+
+.arshia-dark.flat-demo .online-education-image-border,
+.arshia-dark.flat-demo .blog-image,
+.arshia-dark.flat-demo .blog-single .modal-content,
+.arshia-dark.flat-demo .portfolio-single .modal-content {
+    background-color: #2c2d30;
+}
+
+.arshia-dark.flat-demo .online-education-image-border img {
     border: 1px solid #3c3c3c;
 }
 
@@ -2019,6 +2237,11 @@ canvas.particles-js-canvas-el {
 
 .mono .bg-base-color,
 .mono .testimonial .owl-dot.active span {
+    background-color: #3c3c3c !important;
+}
+
+.mono .bg-base-color,
+.mono .education .owl-dot.active span {
     background-color: #3c3c3c !important;
 }
 
@@ -2142,6 +2365,19 @@ canvas.particles-js-canvas-el {
 }
 
 .mono.arshia-dark .testimonial .owl-carousel .owl-dot.active span {
+    background-color: #dedede !important;
+}
+
+.mono.arshia-dark .skill-box .fill-skillbar,
+.mono.arshia-dark .education .owl-dot.active span {
+    background-color: #dedede;
+}
+
+.mono.arshia-dark .education .owl-carousel .owl-dot span {
+    background-color: #3c3c3c;
+}
+
+.mono.arshia-dark .education .owl-carousel .owl-dot.active span {
     background-color: #dedede !important;
 }
 
