@@ -174,9 +174,12 @@ button {
 }
 
 .resume-title:hover .border-style {
-    width: 90px;
+    width: 90px;    
 }
 
+.resume-title {
+    margin-top: 2em;
+}
 
 /*-------------------------
         ColorPallet
