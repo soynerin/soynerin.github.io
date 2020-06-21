@@ -32,6 +32,8 @@
                         <li><a href="https://github.com/soynerin" rel="noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
                     </ul>
                 </nav>
+
+                <button id="soynerinpage">Sitio web personal</button>
             </header>
 
             <!-- Footer -->
@@ -44,6 +46,10 @@
     <script>
         window.onload = function() {
             document.body.classList.remove('is-preload');
+
+            document.getElementById("soynerinpage").addEventListener("click", function() {
+                window.open("https://yosoynerin.firebaseapp.com/", '_blank');
+            })
         }
         window.ontouchmove = function() {
             return false;
