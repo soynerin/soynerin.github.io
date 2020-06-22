@@ -1,63 +1,49 @@
 <!DOCTYPE HTML>
 <!--
-	Aerial by HTML5 UP
+	Identity by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="es">
+	<head>
+		<title>Neri Espinola</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript></noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="nerin soynerin neri espinola" /></span>
+							<h1>Neri Espinola</h1>
+							<p>Guitarrista | Desarrollador Web | Desarrollador Mobile</p>
+                        </header>
+                        
+						<footer>
+							<ul class="icons">
+                                <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/neri-espinola/" class="icon brands fa-linkedin">LinkedIn</a></li>                                
+                                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/nespynol" class="icon brands fa-instagram">Instagram</a></li>                                
+                            </ul>
+                            <a class="button" target="_blank" rel="noreferrer" href="https://yosoynerin.firebaseapp.com/">Visitá mi sitio Web</a>
+						</footer>
+					</section>
 
-<head>
-    <title>soyNerin</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; soyNerin</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
 
-<body class="is-preload">
-    <div id="wrapper">
-        <div id="bg"></div>
-        <div id="overlay"></div>
-        <div id="main">
+			</div>
 
-            <!-- Header -->
-            <header id="header">
-                <h1>Neri Agustin Espínola</h1>
-                <p>Guitarrista &nbsp;&bull;&nbsp; Desarrollador Web/Mobile</p>
-                <nav>
-                    <ul>
-                        <li><a href="https://twitter.com/soyNerin" rel="noreferrer" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="https://www.facebook.com/iNeriX" rel="noreferrer" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="https://github.com/soynerin" rel="noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                        <li><a href="https://github.com/soynerin" rel="noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </nav>
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 
-                <button id="soynerinpage">Sitio web personal</button>
-            </header>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <span class="copyright">&copy; soyNerin. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-            </footer>
-
-        </div>
-    </div>
-    <script>
-        window.onload = function() {
-            document.body.classList.remove('is-preload');
-
-            document.getElementById("soynerinpage").addEventListener("click", function() {
-                window.open("https://yosoynerin.firebaseapp.com/", '_blank');
-            })
-        }
-        window.ontouchmove = function() {
-            return false;
-        }
-        window.onorientationchange = function() {
-            document.body.scrollTop = 0;
-        }
-    </script>
-</body>
-
+	</body>
 </html>
